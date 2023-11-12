@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.headerBar{
+    background-color: #242831;
+    height: 100px;
+    width:100vw;
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+.Logo{
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+    position: absolute;
+    left: 15px;
+    top:15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Logo>img{
+    height: 100%;
+}
+/*Search*/
+
+.SearchBlock{
+    height: 100px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SearchBar{
+    height: 50px;
+    width: 400px;
+    border:solid #585C65 1px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.SearchBar>svg{
+    margin:0 10px;
+}
+.SearchBar>input{
+    background-color: #242831;
+    font-size: 16px;
+    border: none;
+    height: 25px;
+    outline: none;
+    color: white;
+}
+/*Theme*/
+
+.ThemeBlock{
+    height: 100px;
+    width: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Theme{
+    height: 50px;
+    width: 105px;
+    background-color: #373C42;
+    border-radius: 25px;
+}
+.Theme>.Light{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Theme>.Light>svg{
+    fill:#585C65;
+}
+.Theme>.Dark{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: #4147FF;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Theme>.Dark>svg{
+    fill:White;
+}
+/*line*/
+.line{
+    height: 50px;
+    width: 2px;
+    background-color: #585A66;
+    margin-top: 25px;
+}
+/*User*/
+
+.UserBlock{
+    height: 100px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.UserBarLogin{
+    background-color: #49505F;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.UserBarLogin:hover{
+    background-color: #363b46;
+}
+
+.UserBarAuthen{
+    height: 50px;
+    width: 200px;
+    display: block;
+}
+.UserInfo{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    color: white;
+    float: left;
+}
+.exitButton{
+    float: right;
+    margin-top: 10px;
+}

@@ -1,0 +1,118 @@
+
+.ListTitleCreate{
+    width: 1200px;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*ListsTitleCreate*/
+.ListTitleCreate>.Title{
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    
+}
+.ListTitleCreate>.CreateListBlock{
+    color: white;
+    height: 50px;
+    width: 270px;
+    background-color: #242831;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+}
+.ListTitleCreate>.CreateListBlock:hover{
+    background-color: #313642;
+}
+.ListTitleCreate>.CreateListBlock>svg{
+    margin-left: 10px;
+}
+
+
+/*ListOfLists*/
+
+.ListOfLists{
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.ListoBar{
+    background-color: #242831;
+    height: 80px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*IconBar*/
+
+.IconBlock{
+    height: 100%;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+/*InfoBlock*/
+
+.InfoBlock{
+    height: 100%;
+    width: 910px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.titleList{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+.roleList{
+    color: #585C65;
+}
+
+/*ButtonBlock*/
+
+.ButtonBlock{
+    width: 210px;
+    float: left;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.ArchiveButton>svg{
+    transition: .3s ease-in-out;
+    fill:white;
+    cursor: pointer;
+}
+.EditButton>svg{
+    transition: .1s ease-in-out;
+    fill:white;
+    cursor: pointer;
+}
+.DeleteButton>svg{
+    transition: .3s ease-in-out;  
+    fill:#BE4747; 
+    cursor: pointer; 
+}  
+.ArchiveButton>svg:hover{
+    fill:rgb(116, 116, 116);
+}
+.EditButton>svg:hover{
+    fill:rgb(116, 116, 116);
+}
+.DeleteButton>svg:hover{
+    fill:#772f2f;    
+}  

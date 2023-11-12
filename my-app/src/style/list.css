@@ -1,0 +1,276 @@
+.ListDetailBlock{
+    width: 1200px;
+    height: 90px;
+    margin: 0 auto;
+}
+.ListDetailTitle{
+    width: 100%;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+.ListDInfa{
+    display: flex;
+    justify-content: center;
+}
+.LD-ItemsList{
+    width: 500px;
+    margin-right:12px;
+}
+
+/*Item*/
+
+
+.LD-Item{
+    background-color: #242831;
+    height: 40px;
+    width: calc(100% - 20px);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+.LD-ItemHide{
+    display: none;
+}
+.LD-Item>input{
+    height:30px;
+    background-color: red;
+    width: 30px;
+    margin-top: 5px;
+    margin-right: 10px;
+    float: left;
+}
+.LD-Item>form>input{
+    height:30px;
+    background-color: red;
+    width: 30px;
+    margin-top: 5px;
+    margin-right: 10px;
+    float: left;
+}
+.shlapa{
+    float: left;
+    width: 330px;
+}
+.shlapaedit{
+    float: left;
+    width: 330px;
+}
+.shlapaedit>.Item-Title>input, .shlapaedit>.Item-Dec>input{
+    background-color: #242831;
+    border: none;
+    border-bottom:1px solid white ;
+    color: white;
+    outline: none;
+}
+.shlapa>.Item-Title{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.shlapa>.Item-Dec{
+    color: #585C65;
+    font-size: 12px;
+    
+}
+.LD-Buttons{
+    float: right;
+    display: flex;
+    height: 100%;
+    align-items: center
+}
+.EditoButton{
+    margin-right: 30px;
+    fill: white;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.EditoButton:hover{
+    fill: rgb(194, 194, 194);
+}
+.DeletoButton{
+    fill: #BE4747;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.DeletoButton:hover{
+    fill: #8a3434;
+}
+
+
+/*Add towar*/
+
+.LD-AddTowar{
+    background-color: #333946;
+    border-radius: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.LD-AddTowar:hover{
+    background-color: #22262e;
+    
+}
+/*addtowar*/
+.addtowar{
+    background-color: #242831;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: block;
+}
+.addtowar-hidden{
+    display: none;
+}
+.addtowar>form>div{
+    float: left;
+    height: 100%;
+    width: 270px;
+    margin: 10px 0 0 10px;
+}
+.addtowar>form>div>input{
+    width: 270px;
+    background-color: #242831;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+}
+.SaveButton{
+    background-color: rgb(42, 99, 42);
+    border-radius: 10px;
+    height: 30px;
+    color: white;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin: 15px 10px 0 0 ; 
+    border: none;
+}
+.SaveButtonEdit{
+    background-color: rgb(42, 99, 42);
+    border-radius: 10px;
+    height: 30px;
+    color: white;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    border: none;
+}
+
+/*Member*/
+
+.LD-MemberList{
+    background-color: #242831;
+    padding: 10px;
+    width: 310px;
+    border-radius: 10px;
+}
+.LD-MemberListVis{
+    background-color: #242831;
+    padding: 10px;
+    width: 310px;
+    border-radius: 10px;
+}
+.LD-MemeberHead{
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    width: 100%;
+    float: left;
+}
+.LD-MemeberHead>.a{
+    float: left;
+}
+.EditMember{
+    fill: white;
+    float: right;
+}
+.Members{
+    float: left;
+    width: 100%;
+}
+.Garazza{
+    width: 100%;
+    float: left;
+    height: 40px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.Garazza>div:nth-child(1){
+    color: white;
+    font-size: 24px;
+    float: left;
+    margin-top: 5px;
+}
+.Garazza>div:nth-child(2){
+    color: #585C65;
+    float: left;
+    margin-top: 10px;
+    margin-left: 5px;
+    
+}
+.DeleteUser{
+    fill: #BE4747;
+    right: 5px;
+    display: block;
+    position: absolute;
+    top:5px;
+    
+}
+.DeleteUser:hover{
+    fill: #923a3a;
+}
+.DeleteUserHide{
+    display: none;
+}
+.LD-MemberList>.PlusMember{
+    display: none;
+}
+.LD-MemberListVis>.PlusMember{
+    background-color: #333946;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.LD-MemberListVis>.PlusMember:hover{
+    background-color: #1f232b;
+}
+.MemberSearch>.Garazza{
+    display: block;
+}
+.MemberSearch{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.MemberSearchHide{
+    display: none;
+}
+.EditMemberNone{
+    display: none;
+}

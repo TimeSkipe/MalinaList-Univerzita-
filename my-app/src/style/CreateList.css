@@ -1,0 +1,57 @@
+.CreateFrom{
+    width: 400px;
+    background-color: #242831;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.CreateFrom>form{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+.CreateFrom>form>input{
+    width: 360px;
+    height: 30px;
+    border: none;
+    border-bottom: solid white 1px;
+    background-color: #242831;
+    font-size: 20px;
+    padding-left: 10px;
+    color: white;
+    margin-bottom: 10px;
+}
+.CreateFrom>form>button{
+    height: 40px;
+    background-color: #4147FF;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.CreateFrom>form>button:hover{
+    background-color: #3439c4;
+}
+.CreateFrom>form>div>label{
+    float: left;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+.CreateFrom>form>div>label:active{
+    background-color: #3439c4;
+}
+.CreateFrom>form>div>label>input{
+    visibility: hidden;
+}

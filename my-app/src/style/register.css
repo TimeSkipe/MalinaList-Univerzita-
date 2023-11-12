@@ -1,0 +1,55 @@
+.Reg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+.RegisterBlock{
+    background-color: #242831;
+    width: 400px;
+    border-radius: 10px;
+    padding-top: 30px;
+}
+
+.TitlePage{
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    margin: 10px 0;
+}
+.RegisterForm{
+    margin-top: 50px;
+}
+.RegisterForm>form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.RegisterForm>form>input{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+    background-color: #242831;
+    border: solid white .5px;
+    padding-left: 10px;
+}
+.RegisterForm>form>button{
+    margin-bottom: 50px;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    background-color: #4147FF;
+    color: white;
+    transition: .3s ease-in-out;
+    font-size: 25px;
+    margin-top:20px;
+}
+.RegisterForm>form>button:hover{
+    background-color: #2f33b9;
+}
