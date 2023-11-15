@@ -8,15 +8,21 @@ import Login from "./page/Login.jsx";
 import CreateList from './page/ListCreate.jsx';
 import List from './page/List.jsx';
 function App() {
+
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [username, setUsername] = useState('');
-  const [search, setSearch] = useState('');
+
+  
+  /* Log out funkce */
   const handleLogout = () => {
     setIsAuthenticated(false);
     localStorage.removeItem('isAuthenticated');
     localStorage.removeItem('username');
   };
+
+
   useEffect(() => {
+    /*Kontrola ci je user Auterizovany */
     const isAuthenticated = localStorage.getItem('isAuthenticated');
     const user = JSON.parse(localStorage.getItem('user'));
 
@@ -27,6 +33,7 @@ function App() {
     };
   }, []);
   
+
   return (
     <div className="App">
       <Header
@@ -35,7 +42,7 @@ function App() {
         login="/login"
         isAuthenticated={isAuthenticated}
         username={username}
-        setIsAuthenticated={setIsAuthenticated} // Додано setIsAuthenticated
+        setIsAuthenticated={setIsAuthenticated}
         handleLogout={handleLogout}
         
       />
@@ -48,9 +55,10 @@ function App() {
           path="/login"
           element={<Login setIsAuthenticated={setIsAuthenticated} setUsername={setUsername} />}
         ></Route>
-        <Route path='/Lists' element={<Lists create = '/CreateList' username={username}/>}></Route>
+        <Route path='/Lists' element={<Lists create = '/CreateList' username={username} isAuthenticated={isAuthenticated}/>}></Route>
         <Route path='/list/:id' element={<List username={username}></List>}></Route>
         <Route path='/CreateList' element={<CreateList username = {username}/>}></Route>
+        <Route path='/*' element={<Lists create = '/CreateList' username={username}/>}></Route>
       </Routes>
     </div>
   );

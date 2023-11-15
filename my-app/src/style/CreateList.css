@@ -1,53 +1,65 @@
 .CreateFrom{
     width: 400px;
-    background-color: #242831;
-    border-radius: 10px;
     margin: 0 auto;
+
+    border-radius: 10px;
+    
+    background-color: #242831;
 }
 .CreateFrom>form{
+    padding-top: 10px;
+
     display: flex;
     align-content: center;
     flex-direction: column;
     align-items: center;
-    padding-top: 10px;
 }
 .CreateFrom>form>input{
     width: 360px;
     height: 30px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+
+    font-size: 20px;
+
     border: none;
     border-bottom: solid white 1px;
-    background-color: #242831;
-    font-size: 20px;
-    padding-left: 10px;
+    
     color: white;
-    margin-bottom: 10px;
+    background-color: #242831;
 }
 .CreateFrom>form>button{
     height: 40px;
-    background-color: #4147FF;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    font-size: 20px;
+    width: 200px;
     margin-bottom: 20px;
     margin-top: 20px;
-    width: 100px;
+    
+    border: none;
+    border-radius: 10px;
+    
+    font-size: 20px;
+    
     transition: .2s ease-in-out;
     cursor: pointer;
+
+    color: white;
+    background-color: #4147FF;
 }
 .CreateFrom>form>button:hover{
     background-color: #3439c4;
 }
 .CreateFrom>form>div>label{
-    float: left;
     height: 50px;
     width: 50px;
+    margin: 0 5px;
+    padding-left: 10px;
+
+    border-radius: 10px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 5px;
-    border-radius: 10px;
-    padding-left: 10px;
+    float: left;
 }
 .CreateFrom>form>div>label:active{
     background-color: #3439c4;

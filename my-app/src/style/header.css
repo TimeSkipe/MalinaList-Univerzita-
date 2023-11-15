@@ -3,21 +3,24 @@
     margin: 0;
 }
 .headerBar{
-    background-color: #242831;
     height: 100px;
     width:100vw;
+
     position: relative;
     display: flex;
     justify-content: end;
+
+    background-color: #242831;
 }
 
 .Logo{
     height: 70px;
     width: 70px;
-    border-radius: 10px;
-    position: absolute;
     left: 15px;
     top:15px;
+    border-radius: 10px;
+
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,6 +33,7 @@
 .SearchBlock{
     height: 100px;
     width: 400px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,8 +41,10 @@
 .SearchBar{
     height: 50px;
     width: 400px;
-    border:solid #585C65 1px;
+
     border-radius: 10px;
+    border:solid #585C65 1px;
+    
     display: flex;
     align-items: center;
 }
@@ -46,18 +52,21 @@
     margin:0 10px;
 }
 .SearchBar>input{
-    background-color: #242831;
-    font-size: 16px;
-    border: none;
     height: 25px;
+
+    font-size: 16px;
+
+    border: none;
     outline: none;
     color: white;
+    background-color: #242831;
 }
 /*Theme*/
 
 .ThemeBlock{
     height: 100px;
     width: 165px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,13 +74,18 @@
 .Theme{
     height: 50px;
     width: 105px;
-    background-color: #373C42;
+
     border-radius: 25px;
+
+    background-color: #373C42;
+    
 }
 .Theme>.Light{
     height: 50px;
     width: 50px;
+
     border-radius: 50px;
+
     float: left;
     display: flex;
     justify-content: center;
@@ -83,12 +97,16 @@
 .Theme>.Dark{
     height: 50px;
     width: 50px;
+
     border-radius: 50px;
-    background-color: #4147FF;
+
+    
     float: right;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: #4147FF;
 }
 .Theme>.Dark>svg{
     fill:White;
@@ -97,32 +115,39 @@
 .line{
     height: 50px;
     width: 2px;
-    background-color: #585A66;
     margin-top: 25px;
+
+    background-color: #585A66;
 }
 /*User*/
 
 .UserBlock{
     height: 100px;
     width: 250px;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .UserBarLogin{
-    background-color: #49505F;
     height: 50px;
     width: 100px;
+    margin: 0 5px;
+
     border-radius: 10px;
+
+    font-size: 16px;
+    text-decoration: none;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 16px;
+    
     transition: .3s ease-in-out;
     cursor: pointer;
-    text-decoration: none;
-    margin: 0 5px;
+    
+    color: white;
+    background-color: #49505F;
 }
 .UserBarLogin:hover{
     background-color: #363b46;
@@ -131,16 +156,19 @@
 .UserBarAuthen{
     height: 50px;
     width: 200px;
+
     display: block;
 }
 .UserInfo{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    color: white;
     float: left;
+
+    color: white;
 }
 .exitButton{
-    float: right;
     margin-top: 10px;
+
+    float: right;
 }

@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// Schema Seznamu
 const listSchema = new mongoose.Schema({
     listname: String,
     selectedOption: String,

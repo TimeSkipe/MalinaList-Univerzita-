@@ -5,13 +5,15 @@
 }
 .ListDetailTitle{
     width: 100%;
-    color: white;
+    height: 70px;
+
     font-size: 32px;
     font-weight: 700;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
+    color: white;
 }
 .ListDInfa{
     display: flex;
@@ -26,66 +28,78 @@
 
 
 .LD-Item{
-    background-color: #242831;
     height: 40px;
     width: calc(100% - 20px);
-    border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
+
+    border-radius: 10px;
+    
     display: block;
+    background-color: #242831;
 }
 .LD-ItemHide{
     display: none;
 }
 .LD-Item>input{
     height:30px;
-    background-color: red;
     width: 30px;
     margin-top: 5px;
     margin-right: 10px;
+
     float: left;
+
+    background-color: red;
 }
 .LD-Item>form>input{
     height:30px;
-    background-color: red;
     width: 30px;
     margin-top: 5px;
     margin-right: 10px;
+
     float: left;
+
+    background-color: red;
 }
 .shlapa{
-    float: left;
     width: 330px;
+
+    float: left
 }
 .shlapaedit{
-    float: left;
     width: 330px;
+
+    float: left;
 }
 .shlapaedit>.Item-Title>input, .shlapaedit>.Item-Dec>input{
-    background-color: #242831;
+    outline: none;
     border: none;
     border-bottom:1px solid white ;
+
     color: white;
-    outline: none;
+    background-color: #242831;
 }
 .shlapa>.Item-Title{
-    color: white;
     font-size: 20px;
     font-weight: 600;
+
+    color: white;
 }
 .shlapa>.Item-Dec{
-    color: #585C65;
     font-size: 12px;
-    
+
+    color: #585C65;
 }
 .LD-Buttons{
+    height: 100%;
+
     float: right;
     display: flex;
-    height: 100%;
     align-items: center
 }
 .EditoButton{
     margin-right: 30px;
+    
     fill: white;
     transition: .2s ease-in-out;
     cursor: pointer;
@@ -106,93 +120,114 @@
 /*Add towar*/
 
 .LD-AddTowar{
-    background-color: #333946;
-    border-radius: 10px;
     height: 50px;
+    
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 600;
+
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 24px;
-    font-weight: 600;
+    
     cursor: pointer;
     transition: .3s ease-in-out;
+    background-color: #333946;
 }
 .LD-AddTowar:hover{
     background-color: #22262e;
-    
 }
 /*addtowar*/
 .addtowar{
-    background-color: #242831;
     height: 60px;
     margin-bottom: 10px;
     border-radius: 10px;
     display: block;
+
+    background-color: #242831;
 }
 .addtowar-hidden{
     display: none;
 }
 .addtowar>form>div{
-    float: left;
     height: 100%;
     width: 270px;
     margin: 10px 0 0 10px;
+
+    float: left;
 }
 .addtowar>form>div>input{
     width: 270px;
-    background-color: #242831;
     border: none;
     border-bottom: 1px solid white;
+
     outline: none;
     color: white;
+    background-color: #242831;
 }
 .SaveButton{
-    background-color: rgb(42, 99, 42);
-    border-radius: 10px;
     height: 30px;
-    color: white;
     width: 100px;
+    border-radius: 10px;
+    margin: 15px 10px 0 0 ; 
+    
     display: flex;
     align-items: center;
     justify-content: center;
     float: right;
-    margin: 15px 10px 0 0 ; 
+    
     border: none;
+    color: white;
+    background-color: rgb(42, 99, 42);
 }
 .SaveButtonEdit{
-    background-color: rgb(42, 99, 42);
     border-radius: 10px;
     height: 30px;
-    color: white;
     width: 100px;
+
     display: flex;
     align-items: center;
     justify-content: center;
     float: right;
     border: none;
+
+    background-color: rgb(42, 99, 42);
+    color: white;
 }
 
 /*Member*/
 
 .LD-MemberList{
-    background-color: #242831;
     padding: 10px;
     width: 310px;
     border-radius: 10px;
+
+    background-color: #242831;
 }
 .LD-MemberListVis{
-    background-color: #242831;
     padding: 10px;
     width: 310px;
     border-radius: 10px;
+
+    background-color: #242831;
 }
 .LD-MemeberHead{
-    color: white;
+    width: 100%;
     font-size: 24px;
     font-weight: 600;
-    width: 100%;
+
+    color: white;
     float: left;
+}
+
+.LD-MemeberHead>div>svg{
+    fill: white;
+
+    transition: .3s ease-in-out;
+}
+.LD-MemeberHead>div>svg:hover{
+    fill: rgb(189, 189, 189);
 }
 .LD-MemeberHead>.a{
     float: left;
@@ -202,37 +237,41 @@
     float: right;
 }
 .Members{
-    float: left;
     width: 100%;
+
+    float: left;
 }
 .Garazza{
     width: 100%;
-    float: left;
     height: 40px;
     margin-bottom: 5px;
+
+    float: left;
     cursor: pointer;
     position: relative;
 }
 .Garazza>div:nth-child(1){
-    color: white;
     font-size: 24px;
-    float: left;
     margin-top: 5px;
+    float: left;
+
+    color: white;
 }
 .Garazza>div:nth-child(2){
-    color: #585C65;
-    float: left;
     margin-top: 10px;
     margin-left: 5px;
-    
+
+    color: #585C65;
+    float: left;
 }
 .DeleteUser{
-    fill: #BE4747;
+    top:5px;
     right: 5px;
+
     display: block;
     position: absolute;
-    top:5px;
     
+    fill: #BE4747;
 }
 .DeleteUser:hover{
     fill: #923a3a;
@@ -244,18 +283,21 @@
     display: none;
 }
 .LD-MemberListVis>.PlusMember{
-    background-color: #333946;
     height: 50px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+
     font-size: 24px;
     border-radius: 10px;
     font-weight: 600;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     cursor: pointer;
     transition: .3s ease-in-out;
+    background-color: #333946;
+    color: white;
 }
 .LD-MemberListVis>.PlusMember:hover{
     background-color: #1f232b;
@@ -264,9 +306,22 @@
     display: block;
 }
 .MemberSearch{
-    float: left;
     width: 100%;
+    border-top: 1px solid white;
     margin-bottom: 10px;
+    margin-top: 10px;
+    
+    float: left;
+}
+.MemberToAdd{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    font-size: 24px;
+    font-weight: 600;
+    
+    text-align: center;
+    color: white;
 }
 .MemberSearchHide{
     display: none;
