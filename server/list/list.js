@@ -98,5 +98,33 @@ routerList.get('/getList/:id', async (req, res) => {
     }
 });
 
+//Zmena nazvu a icon seznamu
+routerList.put('/EditList/:id', async (req, res) => {
+    const listId = req.params.id;
+    const { listname, selectedOption } = req.body;
+
+    // Перевірка, чи всі обов'язкові поля не пусті
+    if ((listname === undefined || listname === null) && (selectedOption === undefined || selectedOption === null)) {
+        return res.status(400).json({ error: 'Будь ласка, заповніть хоча б одне поле' });
+    }
+
+    try {
+        // Отримання поточного запису з бази даних
+        const currentList = await List.findById(listId);
+
+        // Оновлення запису в базі даних з урахуванням того, що поля можуть бути пустими
+        const updatedList = await List.findByIdAndUpdate(listId, {
+            listname: listname !== undefined ? listname : currentList.listname,
+            selectedOption: selectedOption !== undefined ? selectedOption : currentList.selectedOption,
+        }, { new: true });
+
+        // Відправлення відповіді із оновленим списком
+        res.json(updatedList);
+    } catch (error) {
+        console.error('Помилка оновлення списку:', error);
+        res.status(500).json({ error: 'Помилка оновлення списку' });
+    }
+});
+
 
 export default routerList;
