@@ -7,6 +7,7 @@ import Register from "./page/registration.jsx";
 import Login from "./page/Login.jsx";
 import CreateList from './page/ListCreate.jsx';
 import List from './page/List.jsx';
+import EditList from './page/EditList.jsx';
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -33,7 +34,6 @@ function App() {
     };
   }, []);
   
-
   return (
     <div className="App">
       <Header
@@ -44,7 +44,6 @@ function App() {
         username={username}
         setIsAuthenticated={setIsAuthenticated}
         handleLogout={handleLogout}
-        
       />
       <Routes>
         <Route
@@ -58,6 +57,7 @@ function App() {
         <Route path='/Lists' element={<Lists create = '/CreateList' username={username} isAuthenticated={isAuthenticated}/>}></Route>
         <Route path='/list/:id' element={<List username={username}></List>}></Route>
         <Route path='/CreateList' element={<CreateList username = {username}/>}></Route>
+        <Route path='/EditList/:id' element={<EditList/>}></Route>
         <Route path='/*' element={<Lists create = '/CreateList' username={username}/>}></Route>
       </Routes>
     </div>
