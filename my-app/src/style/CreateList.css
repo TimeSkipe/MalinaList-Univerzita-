@@ -1,3 +1,26 @@
+.TitlePage{
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.TitlePage>.ButtonBack{
+    height: 40px;
+    width: 40px;
+
+    float: left;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease-in-out;
+    
+    fill: white;
+}
+
+.TitlePage>.ButtonBack{
+    fill: rgb(201, 201, 201);
+}
 .CreateFrom{
     width: 400px;
     margin: 0 auto;
@@ -48,22 +71,24 @@
 .CreateFrom>form>button:hover{
     background-color: #3439c4;
 }
-.CreateFrom>form>div>label{
+.LabelIcon{
     height: 50px;
     width: 50px;
     margin: 0 5px;
     padding-left: 10px;
 
     border-radius: 10px;
+    transition: .3s ease-in-out;
 
     display: flex;
     align-items: center;
     justify-content: center;
     float: left;
 }
-.CreateFrom>form>div>label:active{
+
+.LabelIcon:active{
     background-color: #3439c4;
 }
-.CreateFrom>form>div>label>input{
+.LabelIcon>input{
     visibility: hidden;
 }

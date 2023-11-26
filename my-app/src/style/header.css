@@ -44,12 +44,24 @@
 
     border-radius: 10px;
     border:solid #585C65 1px;
-    
+    position: relative;
+
     display: flex;
     align-items: center;
 }
-.SearchBar>svg{
+.SearchBar>svg:nth-child(1){
     margin:0 10px;
+    cursor: pointer;
+}
+.SearchBar>svg:nth-child(3){
+    right: 10px;
+    transition: .2s ease-in-out;
+    position: absolute;
+    fill:#585C65;
+    cursor: pointer;
+}
+.SearchBar>svg:nth-child(3):hover{
+    fill: #97a0b1;
 }
 .SearchBar>input{
     height: 25px;

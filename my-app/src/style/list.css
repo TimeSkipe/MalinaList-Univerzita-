@@ -2,6 +2,24 @@
     width: 1200px;
     height: 90px;
     margin: 0 auto;
+    position: relative;
+}
+.ListDetailBlock>.ButtonBack{
+    height: 30px;
+    width: 30px;
+    top:25px;
+    left: 190px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: .3s ease-in-out;
+    
+    fill: white;
+}
+.ListDetailBlock>.ButtonBack:hover{
+    fill: rgb(201, 201, 201);
 }
 .ListDetailTitle{
     width: 100%;
@@ -37,6 +55,19 @@
     
     display: block;
     background-color: #242831;
+}
+.LD-ItemSkeleton{
+    height: 40px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+    
+    display: block;
+    background: linear-gradient(149deg, #1f232b 0%, #303642 100%);
+    animation: gradient 10s infinite linear;
+    background-size: 400%;
 }
 .LD-ItemHide{
     display: none;
@@ -97,6 +128,9 @@
     display: flex;
     align-items: center
 }
+.LD-ButtonsHide{
+    display: none;
+}
 .EditoButton{
     margin-right: 30px;
     
@@ -111,6 +145,7 @@
     fill: #BE4747;
     transition: .2s ease-in-out;
     cursor: pointer;
+    display: block;
 }
 .DeletoButton:hover{
     fill: #8a3434;
@@ -204,6 +239,26 @@
     border-radius: 10px;
 
     background-color: #242831;
+}
+.LD-MemberListSkeleton{
+    padding: 10px;
+    width: 310px;
+    border-radius: 10px;
+
+    background: linear-gradient(149deg, #1f232b 0%, #303642 100%);
+    animation: gradient 10s infinite linear;
+    background-size: 400%;
+}
+@keyframes gradient {
+    0% {
+        background-position: 80% 0%;
+    }
+    50% {
+        background-position: 20% 100%;
+    }
+    100% {
+        background-position: 80% 0%;
+    }
 }
 .LD-MemberListVis{
     padding: 10px;
@@ -327,5 +382,29 @@
     display: none;
 }
 .EditMemberNone{
+    display: none;
+}
+.LeaveButton{
+    height: 50px;
+    width: 100%;
+
+    border-radius: 10px ;
+    font-size: 24px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+
+    color: white;
+    background-color: #333946;
+}
+.LeaveButton:hover{
+    background-color: #585C65;
+}
+.LeaveButtonHide{
     display: none;
 }
