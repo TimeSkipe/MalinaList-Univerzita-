@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import "../style/CreateList.css"
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { BackButtonSVG} from '../files/svg';
 import { People, Card, Calender,Pin } from "../files/svg";
 import { PORT } from "../connect/connect";
 
-const CreateList =(props) =>{
+const CreateList = (props) =>{
     const navigate = useNavigate();
 
     /* selectedOption vyber urciteho icon */
@@ -47,7 +49,12 @@ const CreateList =(props) =>{
     return(
         <div>
                 <div className="CreateBar">
-                    <div className="TitlePage">Create List</div>
+                    
+                    <div className="TitlePage">
+                    <Link to='/Lists' className='ButtonBack'>
+                        <BackButtonSVG/>
+                    </Link>
+                    Create List</div>
                     <div className="CreateFrom">
 
                         <form onSubmit={handleSubmit}>
@@ -56,10 +63,11 @@ const CreateList =(props) =>{
                                 placeholder="List`s name"
                                 value={listname}
                                 onChange={(e) => setListName(e.target.value)}
+                                required
                             />
                             <div>
 
-                                <label htmlFor="people">
+                                <label htmlFor="people" className='LabelIcon'>
                                     <People />
                                     <input
                                         type="radio"
@@ -68,8 +76,8 @@ const CreateList =(props) =>{
                                         onChange={(e) => setSelectedOption(e.target.id)}
                                     />
                                 </label>
-                                <label htmlFor="Card">
-                                    <div><Card /></div>
+                                <label htmlFor="Card" className='LabelIcon'>
+                                    <Card />
                                     <input
                                         type="radio"
                                         name="radio"
@@ -77,8 +85,8 @@ const CreateList =(props) =>{
                                         onChange={(e) => setSelectedOption(e.target.id)}
                                     />
                                 </label>
-                                <label htmlFor="Calender">
-                                    <div><Calender /></div>
+                                <label htmlFor="Calender" className='LabelIcon'>
+                                    <Calender />
                                     <input
                                         type="radio"
                                         name="radio"
@@ -86,8 +94,8 @@ const CreateList =(props) =>{
                                         onChange={(e) => setSelectedOption(e.target.id)}
                                     />
                                 </label>
-                                <label htmlFor="Pin">
-                                    <div><Pin /></div>
+                                <label htmlFor="Pin" className='LabelIcon'>
+                                    <Pin />
                                     <input
                                         type="radio"
                                         name="radio"

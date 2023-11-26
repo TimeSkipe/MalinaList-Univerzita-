@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import "../style/lists.css"
 import { Link } from 'react-router-dom';
 import { PORT } from "../connect/connect";
-import { People, Card, Calender,Pin, ArchiveSVG, EditButtonSVG, DeleteButtonSVG, PlusSVG } from "../files/svg";
+import { ArchiveSVG, EditButtonSVG, DeleteButtonSVG, PlusSVG} from "../files/svg";
+import { ArchiveButton, SwichFun, DeleteButton } from '../components/ListsFunComponent';
+import { LoadingComponentLists } from '../components/loadingSkeletons';
 const Lists = (props) =>{ 
 
     const[Listo, setListo] = useState([]);
@@ -20,78 +22,34 @@ const Lists = (props) =>{
         }
         ListInfa();
         
-    },[])
-
-    /* Funkce na ukazovani urciteho icon podle selected z databazi */
-    const SwichFun = (selected) =>{
-        switch (selected) {
-            case "people":
-                return <People/>
-            case "Card":
-                    return <Card/>
-            case "Calender":
-                return <Calender/>
-            case "Pin":
-                return <Pin/>
-            default:
-                break;
-        }
-    }
-
-    /* Button na vymazeni seznamu */
-    const DeleteButton = async (id)=>{
-
-        /* Forma na stvrzeni */
-        const isConfirmed = window.confirm('Are you sure you want to remove this list');
-        if (!isConfirmed) {
-        return;
-        }   
-
-        try {
-            const response = await fetch(`${PORT}/deleteList/${id}`, {
-                method: 'DELETE',
-            });
-
-            const responseData = await response.json();
-            console.log(responseData);
-            window.location.reload();
-        } 
-        catch (error) {
-            console.error('Error deleting list:', error);
-        }
-    }
-
-    /* Button na archivovani seznamu */
-    const ArchiveButton = async (id, ArchiveStatus) => {
-        try {
-            const response = await fetch(`${PORT}/archive/${id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ archive: !ArchiveStatus }),
-            });
+    },[Listo])
     
-            const responseData = await response.json();
-            console.log(responseData);
-            window.location.reload();
-        } 
-        catch (error) {
-            console.error('Error archiving list:', error);
-        }
-    };
+    if(!Listo){
+        return<>{<LoadingComponentLists/>}</>;
+    }
     
+    const Searcho = localStorage.getItem('Searcho');
+    
+    const filteredLists = Listo.filter((ListInfa) => {
+        if (!Searcho) {
+            return true;
+        }
+      
+        const listName = ListInfa.listname || "";
+        const searchLowerCase = Searcho.toLowerCase();
+        return listName.toLowerCase().includes(searchLowerCase);
+      });
     /* Ukazani seznamu */
     const listo = () =>{
         return(
             <>
-                {Listo.map((ListInfa,index) =>{
+                {filteredLists.map((ListInfa,index) =>{
 
                     /* Estli jste creator seznamu tak dostanete "Admin", estli jste member tak "Member", estli jste vubec ne pridany do urciteho seznamu tak seznam se ne ukaze */
                     const isOwner = ListInfa.creator === props.username.email;
                     const isMember = ListInfa.members.some(member => member.email === props.username.email);
 
-                    
+
                     if (isOwner || isMember) {
                         return(
 
@@ -107,15 +65,15 @@ const Lists = (props) =>{
                                         <div className='roleList'>{ListInfa.creator === props.username.email ? 'Admin' : 'Member'}</div>
                                     </div>
                                     
-                                    <div className='ButtonBlock'onClick={() => ArchiveButton(ListInfa._id, ListInfa.archive)}>
+                                    <div className={ListInfa.creator=== props.username.email ? 'ButtonBlock' : "ButtonBlockHide"}>
 
-                                        <div className='ArchiveButton'>
+                                        <div className='ArchiveButton'onClick={() => ArchiveButton(ListInfa._id, ListInfa.archive)}>
                                             <ArchiveSVG/>
                                         </div>
 
-                                        <div className='EditButton'>
+                                        <Link className='EditButton' to={`/EditList/${ListInfa._id}`}>
                                             <EditButtonSVG/>
-                                        </div>
+                                        </Link>
 
                                         <div className='DeleteButton'  onClick={()=>DeleteButton(ListInfa._id)}>
                                             <DeleteButtonSVG/>
