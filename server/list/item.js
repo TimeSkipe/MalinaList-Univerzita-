@@ -89,28 +89,33 @@ routerItem.put('/updateResolved/:id/:itemId', async (req, res) => {
 
 // Uprava nazmu a description konkretneho zbozi podle IdItem v urcitem seznamu podle IdSeznam
 routerItem.put('/updateItem/:listId/:itemId', async (req, res) => {
-    const { listId, itemId } = req.params;
-    const { titleitem, descitem } = req.body;
-  
-    try {
+  const { listId, itemId } = req.params;
+  const { titleitem, descitem } = req.body;
+
+  try {
       const list = await List.findById(listId);
       const itemToUpdate = list.items.id(itemId);
 
       if (itemToUpdate) {
-        itemToUpdate.titleitem = titleitem;
-        itemToUpdate.descitem = descitem;
+          if (titleitem !== "") {
+              itemToUpdate.titleitem = titleitem;
+          }
+          if (descitem !== "") {
+              itemToUpdate.descitem = descitem;
+          }
       } 
       else {
-        return res.status(404).json({ message: 'Item not found' });
+          return res.status(404).json({ message: 'Item not found' });
       }
 
       const updatedList = await list.save();
-  
+
       res.json({ updatedList });
-    } 
-    catch (error) {
+  } 
+  catch (error) {
       console.error('Error updating item:', error);
       res.status(500).json({ message: 'Internal Server Error' });
-    }
-  });
+  }
+});
+
   export default routerItem
