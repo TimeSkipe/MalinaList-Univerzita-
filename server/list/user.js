@@ -77,5 +77,58 @@ routerUsero.delete('/deleteUser', async (req, res) => {
       res.status(500).json({ error: 'Internal server error' });
     }
   });
+  routerUsero.put('/changeLanguage/:id/:lan', async (req, res) => {
+    try {
+      const { id: userId, lan } = req.params;
+      const user = await User.findById(userId);
   
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+  
+      // Оновлення мови користувача
+      user.lan = lan;
+      await user.save();
+  
+      res.json(user);
+    } catch (error) {
+      console.error('Error updating resolved:', error);
+      res.status(500).json({ message: 'Internal Server Error' });
+    }
+  });
+  routerUsero.get('/userlanAndThem/:userId', async (req, res) => {
+    try {
+      const userId = req.params.userId;
+  
+      const user = await User.findById(userId);
+  
+      if (!user) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+  
+      res.json({ lan: user.lan, thema: user.thema });
+    } catch (error) {
+      console.error('Error getting user language', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+  routerUsero.put('/changeThema/:id/:thema', async (req, res) => {
+    try {
+      const { id: userId, thema } = req.params;
+      const user = await User.findById(userId);
+  
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+  
+      // Оновлення мови користувача
+      user.thema = thema;
+      await user.save();
+  
+      res.json(user);
+    } catch (error) {
+      console.error('Error updating resolved:', error);
+      res.status(500).json({ message: 'Internal Server Error' });
+    }
+  });
   export default routerUsero;
