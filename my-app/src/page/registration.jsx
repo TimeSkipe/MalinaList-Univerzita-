@@ -27,7 +27,7 @@ const Register = ({setIsAuthenticated,setUsername}) =>{
     
 
         try {
-          const response = await axios.post(`${PORT}/register`, {name,email,password,thema:'Dark'});
+          const response = await axios.post(`${PORT}/register`, {name,email,password,thema:'Dark',lan:'English'});
           console.log(response.data);
     
           setName('');

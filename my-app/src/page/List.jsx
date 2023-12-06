@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { PORT } from "../connect/connect";
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import "../style/list.css"
+import "../style/media.css";
 import { BackButtonSVG, DeleteButtonSVG, EditButtonSVG } from '../files/svg';
 import { DeleteItem, ResolvedChange, deleteUserFromList, leaveFromList, addMemberToList} from '../components/ListFunComponent';
 import { LoadingComponentList } from '../components/loadingSkeletons';
+import language from '../language/language';
 
 
 const ListDetail = (props) => {
@@ -14,6 +16,7 @@ const ListDetail = (props) => {
 
   const [ShowAddUser, setShowAddUser] = useState(true)
   const [ShowAddUserBlock, setShowAddUserBlock] = useState(false)
+  const [ShowMemberList, setShowMemberList] = useState(false)
   
   /* Data na zmenu nazvu a description zbozi*/
   const [title, setTitle] = useState('');
@@ -123,10 +126,23 @@ const ListDetail = (props) => {
       console.error('Error fetching data:', error);
     }
   };
+
+  const [HideMenuMobil, setHideMenuMobil] = useState(false);
+  const handleResize = () => {
+    if (window.innerWidth <= 768) {
+      setHideMenuMobil(true)
+    } else {
+      setHideMenuMobil(false)
+        
+    }
+  }
+
+
   // volani fetchData, ktera otpovida za nacitani data userov a obsahu listu(first render), druhy a pristi rendery update data userov, a listov bez reloadu stranky 
   useEffect(() => {
     fetchData(id);
-  }, [id, list]);
+    window.addEventListener("resize", handleResize)
+  }, [id, list, window.innerWidth]);
   
   // If list je prazny, volani Loading skeleton, po nacitani data listu, skeleton zmizne
   if (!list) {
@@ -149,35 +165,35 @@ const ListDetail = (props) => {
       <>
         {sortedItems.map((item, index)=>(
            <>
-          <div className={editItemStates[item._id] ? 'LD-ItemHide' : 'LD-Item'} key={index}>
+          <div className={editItemStates[item._id] ? 'LD-ItemHide' : 'LD-Item Second-color'} key={index}>
               <input type="checkbox" defaultChecked={item.resolved} onChange={() => ResolvedChange(item._id, id)} />
 
               <div className='shlapa'>
-                <div className='Item-Title'>{item.titleitem}</div>
-                <div className='Item-Dec'>{item.descitem}</div>
+                <div className='Item-Title Text-Color'>{item.titleitem}</div>
+                <div className='Item-Dec second-text-color'>{item.descitem}</div>
               </div>
 
               <div className='LD-Buttons'>
 
                 <div className='EditoButton' onClick={() => toggleEditState(item._id)}>
-                  <EditButtonSVG/>
+                  <EditButtonSVG className={'SVG-main-color'}/>
                 </div>
                 <div className='DeletoButton' onClick={() => DeleteItem(item._id, id)}>
-                  <DeleteButtonSVG/>
+                  <DeleteButtonSVG className={'DeleteButtonSVG'}/>
                 </div>
 
               </div>
             </div>
-            <div className={editItemStates[item._id] ? 'LD-Item' : 'LD-ItemHide'}>
+            <div className={editItemStates[item._id] ? 'LD-Item Second-color' : 'LD-ItemHide Second-color'}>
 
               <form onSubmit={()=>EditItem(item._id, id)}>
                 <input type="checkbox" defaultChecked={item.resolved} onChange={() => ResolvedChange(item._id, id)}/>
-                <div className='shlapaedit'>
-                  <div className='Item-Title'><input type='text' placeholder={item.titleitem} value={edittitle[item._id] || ""} onChange={(e) => EditTitle(item._id, e.target.value)}/></div>
-                  <div className='Item-Dec'><input type='text' placeholder={item.descitem} value={editdescription[item._id] || ""}  onChange={(e) => EditDescription(item._id, e.target.value)}/></div>
+                <div className='shlapaedit '>
+                  <div className='Item-Title'><input  className='Second-color Text-Color'type='text' placeholder={item.titleitem} value={edittitle[item._id] || ""} onChange={(e) => EditTitle(item._id, e.target.value)}/></div>
+                  <div className='Item-Dec'><input  className='Second-color Text-Color'type='text' placeholder={item.descitem} value={editdescription[item._id] || ""}  onChange={(e) => EditDescription(item._id, e.target.value)}/></div>
                 </div>
                 <div className='LD-Buttons'>
-                  <button className='SaveButtonEdit' type='submit'>Save</button>
+                  <button className='SaveButtonEdit Third-Color Text-Color' type='submit'>{props.lan ? language[props.lan].List.Save : language.English.List.Save}</button>
                 </div>
               </form>
             </div>
@@ -195,10 +211,10 @@ const ListDetail = (props) => {
       <>
         {list.members.map((user, index)=>(
           <div className='Garazza' key={index}>
-            <div>{user.namemember}</div>
-            <div>{user.email}</div>
+            <div className='Text-Color'>{user.namemember}</div>
+            <div className='second-text-color'>{user.email}</div>
             <div className={ShowAddUser ? 'DeleteUserHide' : 'DeleteUser'} onClick={() => deleteUserFromList(user.email, id)}>
-              <DeleteButtonSVG/>
+              <DeleteButtonSVG className={'DeleteButtonSVG'}/>
             </div>
           </div>
         ))}
@@ -220,8 +236,8 @@ const ListDetail = (props) => {
   
     const renderUser = (userData) => (
       <div className='Garazza' key={userData._id} onClick={() => addMemberToList(userData._id, id)}>
-        <div>{userData.name}</div>
-        <div>{userData.email}</div>
+        <div className='Text-Color'>{userData.name}</div>
+        <div className='second-text-color'>{userData.email}</div>
       </div>
     );
   
@@ -230,33 +246,33 @@ const ListDetail = (props) => {
   return (
     <div className='ListDetailBlock'>
       <Link to='/Lists' className='ButtonBack'>
-        <BackButtonSVG/>
+        <BackButtonSVG className={'SVG-main-color'}/>
       </Link>
-      <div className='ListDetailTitle'>{list.listname}</div>
-
+      <div className='ListDetailTitle Text-Color'>{list.listname}</div>
+      <div className='Text-Color Main-Button HideMobil' onClick={()=>setShowMemberList(true)}>{props.lan ? language[props.lan].List.MemberList : language.English.List.MemberList}</div>
       <div className='ListDInfa'>
         <div className='LD-ItemsList'>
           {listMap()}
-          <div className={showAddTowar ? 'addtowar' : 'addtowar-hidden'}>
+          <div className={showAddTowar ? 'addtowar Second-color' : 'addtowar-hidden Second-color'}>
 
             <form onSubmit={Submit}>
               <div>
-                <input type="text" placeholder='Title item' value={title} onChange={(e) => setTitle(e.target.value)} required/>
-                <input type="text" placeholder='Item description' value={dec} onChange={(e) => setDec(e.target.value)} required/>
+                <input type="text" className='Second-color Text-Color' placeholder={props.lan ? language[props.lan].List.TitleItem : language.English.List.TitleItem} value={title} onChange={(e) => setTitle(e.target.value)} required/>
+                <input type="text" className='Second-color Text-Color' placeholder={props.lan ? language[props.lan].List.ItemDes : language.English.List.ItemDes} value={dec} onChange={(e) => setDec(e.target.value)} required/>
               </div>
-              <button className='SaveButton' type='submit'>Save</button>
+              <button className='SaveButton Third-Color Text-Color' type='submit'>{props.lan ? language[props.lan].List.Save : language.English.List.Save}</button>
             </form>
             
           </div>
-          <div className='LD-AddTowar' onClick={() => setShowAddTowar(!showAddTowar)}>Add new towar</div>
+          <div className='LD-AddTowar Third-Color Text-Color' onClick={() => setShowAddTowar(!showAddTowar)}>{props.lan ? language[props.lan].List.AddNewTowar : language.English.List.AddNewTowar}</div>
         </div>
 
-        <div className={ShowAddUser ? 'LD-MemberList' : 'LD-MemberListVis'}>
-          <div className='LD-MemeberHead'>
-
-            <div className='a'>Member list</div>
+        <div className={ShowAddUser ? 'LD-MemberList Second-color' : 'LD-MemberListVis Second-color'} style={HideMenuMobil? {transform:ShowMemberList ? "translateY(0)" : "TranslateY(-100%)"} : null}>
+          <div className='LD-MemeberHead '>
+            <BackButtonSVG className={'SVG-main-color'} fun={()=>setShowMemberList(false)}/>
+            <div className='a Text-Color'>{props.lan ? language[props.lan].List.MemberList : language.English.List.MemberList}</div>
             <div className={list.creator === props.username.email ? 'EditMember' : 'EditMemberNone'} onClick={()=>{setShowAddUser(!ShowAddUser);setShowAddUserBlock(false)}}>
-              <EditButtonSVG/>
+              <EditButtonSVG className={'SVG-main-color'}/>
             </div>
 
           </div>
@@ -264,13 +280,13 @@ const ListDetail = (props) => {
           <div className='Members'>
             {userListo()}
           </div>
-          <div className={list.creator !== props.username.email ? "LeaveButton":'LeaveButtonHide'}onClick={() => CallLeaveClick(props.username.email, id)} >Leave from list</div>
+          <div className={list.creator !== props.username.email ? "LeaveButton Text-Color Third-Color":'LeaveButtonHide'}onClick={() => CallLeaveClick(props.username.email, id)} >{props.lan ? language[props.lan].List.Leave : language.English.List.Leave}</div>
           <div className={ShowAddUserBlock ? 'MemberSearch' : "MemberSearchHide"}>
-            <div className='MemberToAdd'>Member to add</div>
+            <div className='MemberToAdd Text-Color'>{props.lan ? language[props.lan].List.MemberToAdd : language.English.List.MemberToAdd}</div>
             {AdduserListo()}
           </div>
           
-          <div className='PlusMember' onClick={()=>{setShowAddUserBlock(!ShowAddUserBlock)}}>Add new Member</div>
+          <div className='PlusMember Text-Color Third-Color' onClick={()=>{setShowAddUserBlock(!ShowAddUserBlock)}}>{props.lan ? language[props.lan].List.AddMemberBut : language.English.List.AddMemberBut}</div>
         </div>
       </div>
     </div>

@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import "../style/CreateList.css"
+import "../style/index.css"
 import { useNavigate } from 'react-router-dom';
 import { Link, useParams } from 'react-router-dom';
 import { BackButtonSVG} from '../files/svg';
 import { People, Card, Calender,Pin } from "../files/svg";
 import { PORT } from "../connect/connect";
+import language from '../language/language';
 
-const EditList =() =>{
+const EditList =(props) =>{
     const navigate = useNavigate();
     const {id} = useParams();
     /* selectedOption vyber urciteho icon */
@@ -45,26 +47,28 @@ const EditList =() =>{
     
     return(
         <div>
-                <div className="CreateBar">
+                <div className="CreateBar ">
                     
-                    <div className="TitlePage">
+                    <div className="TitlePage Text-Color">
                     <Link to='/Lists' className='ButtonBack'>
-                        <BackButtonSVG/>
+                        <BackButtonSVG className={'SVG-main-color'}/>
                     </Link>
-                    Edit list</div>
-                    <div className="CreateFrom">
+                    {props.lan ? language[props.lan].EditList.EditList : language.English.EditList.EditList}</div>
+                    <div className="CreateFrom Second-color">
 
                         <form onSubmit={handleSubmit}>
                             <input
                                 type="text"
-                                placeholder="List`s name"
+                                placeholder={props.lan ? language[props.lan].EditList.ListName : language.English.EditList.ListName}
                                 value={listname}
                                 onChange={(e) => setListName(e.target.value)}
+                                className='Second-color Text-Color'
+                                required
                             />
                             <div>
 
-                                <label htmlFor="people" className='LabelIcon'>
-                                    <People />
+                                <label htmlFor="people" className='LabelIcon Active-color'>
+                                    <People className={'SVG-main-color'}/>
                                     <input
                                         type="radio"
                                         name="radio"
@@ -72,8 +76,8 @@ const EditList =() =>{
                                         onChange={(e) => setSelectedOption(e.target.id)}
                                     />
                                 </label>
-                                <label htmlFor="Card" className='LabelIcon'>
-                                    <Card />
+                                <label htmlFor="Card" className='LabelIcon Active-color'>
+                                    <Card  className={'SVG-main-color'}/>
                                     <input
                                         type="radio"
                                         name="radio"
@@ -81,8 +85,8 @@ const EditList =() =>{
                                         onChange={(e) => setSelectedOption(e.target.id)}
                                     />
                                 </label>
-                                <label htmlFor="Calender" className='LabelIcon'>
-                                    <Calender />
+                                <label htmlFor="Calender" className='LabelIcon Active-color'>
+                                    <Calender  className={'SVG-main-color'}/>
                                     <input
                                         type="radio"
                                         name="radio"
@@ -90,8 +94,8 @@ const EditList =() =>{
                                         onChange={(e) => setSelectedOption(e.target.id)}
                                     />
                                 </label>
-                                <label htmlFor="Pin" className='LabelIcon'>
-                                    <Pin />
+                                <label htmlFor="Pin" className='LabelIcon Active-color'>
+                                    <Pin  className={'SVG-main-color'}/>
                                     <input
                                         type="radio"
                                         name="radio"
@@ -102,7 +106,7 @@ const EditList =() =>{
 
                             </div>
 
-                            <button type="submit">Save changes</button>
+                            <button type="submit" className='Text-Color Third-Color'>{props.lan ? language[props.lan].EditList.Save : language.English.EditList.Save}</button>
 
                         </form>
                     </div>

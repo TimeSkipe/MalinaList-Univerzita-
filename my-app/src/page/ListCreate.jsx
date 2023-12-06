@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { BackButtonSVG} from '../files/svg';
 import { People, Card, Calender,Pin } from "../files/svg";
 import { PORT } from "../connect/connect";
+import language from '../language/language';
 
 const CreateList = (props) =>{
     const navigate = useNavigate();
@@ -50,25 +51,26 @@ const CreateList = (props) =>{
         <div>
                 <div className="CreateBar">
                     
-                    <div className="TitlePage">
+                    <div className="TitlePage Text-Color">
                     <Link to='/Lists' className='ButtonBack'>
-                        <BackButtonSVG/>
+                        <BackButtonSVG  className={'SVG-main-color'}/>
                     </Link>
-                    Create List</div>
-                    <div className="CreateFrom">
+                    {props.lan ? language[props.lan].ListCreate.CreateList : language.English.ListCreate.CreateList}</div>
+                    <div className="CreateFrom Second-color">
 
                         <form onSubmit={handleSubmit}>
                             <input
                                 type="text"
-                                placeholder="List`s name"
+                                placeholder={props.lan ? language[props.lan].ListCreate.ListName : language.English.ListCreate.ListName}
                                 value={listname}
                                 onChange={(e) => setListName(e.target.value)}
                                 required
+                                className='Second-color Text-Color'
                             />
                             <div>
 
-                                <label htmlFor="people" className='LabelIcon'>
-                                    <People />
+                                <label htmlFor="people" className='LabelIcon Active-color'>
+                                    <People  className={'SVG-main-color'}/>
                                     <input
                                         type="radio"
                                         name="radio"
@@ -76,8 +78,8 @@ const CreateList = (props) =>{
                                         onChange={(e) => setSelectedOption(e.target.id)}
                                     />
                                 </label>
-                                <label htmlFor="Card" className='LabelIcon'>
-                                    <Card />
+                                <label htmlFor="Card" className='LabelIcon Active-color'>
+                                    <Card  className={'SVG-main-color'}/>
                                     <input
                                         type="radio"
                                         name="radio"
@@ -85,8 +87,8 @@ const CreateList = (props) =>{
                                         onChange={(e) => setSelectedOption(e.target.id)}
                                     />
                                 </label>
-                                <label htmlFor="Calender" className='LabelIcon'>
-                                    <Calender />
+                                <label htmlFor="Calender" className='LabelIcon Active-color'>
+                                    <Calender  className={'SVG-main-color'}/>
                                     <input
                                         type="radio"
                                         name="radio"
@@ -94,8 +96,8 @@ const CreateList = (props) =>{
                                         onChange={(e) => setSelectedOption(e.target.id)}
                                     />
                                 </label>
-                                <label htmlFor="Pin" className='LabelIcon'>
-                                    <Pin />
+                                <label htmlFor="Pin" className='LabelIcon Active-color'>
+                                    <Pin  className={'SVG-main-color'}/>
                                     <input
                                         type="radio"
                                         name="radio"
@@ -106,7 +108,7 @@ const CreateList = (props) =>{
 
                             </div>
 
-                            <button type="submit">Create list</button>
+                            <button type="submit" className='Text-Color Third-Color'>{props.lan ? language[props.lan].ListCreate.CreateNewList : language.English.ListCreate.CreateNewList}</button>
 
                         </form>
                     </div>
