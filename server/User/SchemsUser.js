@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema({
     email: String,
     password: String,
     thema:String,
+    lan:String,
   });
   
   

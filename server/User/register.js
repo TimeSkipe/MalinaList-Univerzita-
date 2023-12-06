@@ -7,7 +7,7 @@ const routerUser = express.Router();
 //Registrace usera na web stranke
 routerUser.post('/register', (req, res) => {
 
-    const { name, email, password, thema } = req.body;
+    const { name, email, password, thema, lan } = req.body;
   
     User.findOne({ email })
       .then(existingUser => {
@@ -15,7 +15,7 @@ routerUser.post('/register', (req, res) => {
           return res.status(400).json({ error: 'Користувач з цим email вже існує' });
         }
   
-        const newUser = new User({ name, email, password, thema });
+        const newUser = new User({ name, email, password, thema, lan });
   
         newUser.save()
           .then(savedUser => {
@@ -55,4 +55,6 @@ routerUser.post('/login', (req, res) => {
         res.status(500).json({ error: 'Сталась помилка на сервері' });
       });
   });
+
+  
   export default routerUser;
