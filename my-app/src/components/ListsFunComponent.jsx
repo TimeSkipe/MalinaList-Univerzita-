@@ -48,18 +48,18 @@ export const ArchiveButton = async (id, ArchiveStatus) => {
 
 
 /* Funkce na ukazovani urciteho icon podle selected z databazi */
-export const SwichFun = (selected) =>{
+export const SwichFun = (selected, classo) =>{
     switch (selected) {
         case "people":
-            return <People/>
+            return <People className={`${classo}`}/>
         case "Card":
-                return <Card/>
+            return <Card className={`${classo}`}/>
         case "Calender":
-            return <Calender/>
+            return <Calender className={`${classo}`}/>
         case "Pin":
-            return <Pin/>
+            return <Pin className={`${classo}`}/>
         default:
-            return<DefaultSVG/>
+            return<DefaultSVG className={`${classo}`}/>
             break;
     }
 }
