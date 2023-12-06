@@ -17,11 +17,10 @@
     font-size: 32px;
     font-weight: 700;
 
-    color: white;
 }
 .ListTitleCreate>.CreateListBlock{
     height: 50px;
-    width: 270px;
+    padding: 0 20px;
 
     font-size: 20px;
     text-decoration: none;
@@ -35,11 +34,7 @@
     transition: .2s ease-in-out;
     cursor: pointer;
     
-    color: white;
-    background-color: #242831;
-}
-.ListTitleCreate>.CreateListBlock:hover{
-    background-color: #313642;
+   
 }
 .ListTitleCreate>.CreateListBlock>svg{
     margin-left: 10px;
@@ -53,19 +48,19 @@
     margin: 0 auto;
     margin-bottom: 20px;
     display: block;
+    border-radius: 10px;
 }
 .ListOfListsHide{
     width: 1200px;
     margin: 0 auto;
     margin-bottom: 20px;
     display: none;
+    border-radius: 10px;
 }
 .ListOfLists>.ListoBar{
     height: 80px;
     width: 100%;
     border-radius: 10px;
-
-    background-color: #242831;
 }
 .ListOfLists>.ListoBarSkelenot{
     height: 80px;
@@ -91,8 +86,6 @@
     height: 80px;
     width: 100%;
     border-radius: 10px;
-    
-    background-color: #3f4147;
 }
 /*IconBar*/
 
@@ -122,11 +115,6 @@
     font-size: 20px;
 
     text-decoration: none;
-
-    color: white;
-}
-.roleList{
-    color: #585C65;
 }
 
 /*ButtonBlock*/
@@ -147,29 +135,18 @@
     transition: .3s ease-in-out;
     cursor: pointer;
 
-    fill:white;
 }
 .EditButton>svg{
     transition: .1s ease-in-out;
     cursor: pointer;
 
-    fill:white;
 }
 .DeleteButton>svg{
     transition: .3s ease-in-out;  
     cursor: pointer; 
 
-    fill:#BE4747; 
 }  
-.ArchiveButton>svg:hover{
-    fill:rgb(116, 116, 116);
-}
-.EditButton>svg:hover{
-    fill:rgb(116, 116, 116);
-}
-.DeleteButton>svg:hover{
-    fill:#772f2f;    
-}  
+ 
 .ArchiveButtonShow{
     height: 60px;
     width: 60px;
@@ -184,11 +161,4 @@
     justify-content: center;
     align-items: center;
 
-    background-color: #242831;
-}
-.ArchiveButtonShow:hover{
-    background-color: #3c4352;
-}
-.ArchiveButtonShow>svg{
-    fill: white;
 }

@@ -3,6 +3,7 @@
     height: 90px;
     margin: 0 auto;
     position: relative;
+    transition: .2s ease-in-out;
 }
 .ListDetailBlock>.ButtonBack{
     height: 30px;
@@ -15,8 +16,6 @@
     align-items: center;
     position: absolute;
     transition: .3s ease-in-out;
-    
-    fill: white;
 }
 .ListDetailBlock>.ButtonBack:hover{
     fill: rgb(201, 201, 201);
@@ -31,14 +30,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
 }
 .ListDInfa{
     display: flex;
     justify-content: center;
 }
 .LD-ItemsList{
-    width: 500px;
     margin-right:12px;
 }
 
@@ -54,7 +51,6 @@
     border-radius: 10px;
     
     display: block;
-    background-color: #242831;
 }
 .LD-ItemSkeleton{
     height: 40px;
@@ -80,7 +76,6 @@
 
     float: left;
 
-    background-color: red;
 }
 .LD-Item>form>input{
     height:30px;
@@ -90,7 +85,6 @@
 
     float: left;
 
-    background-color: red;
 }
 .shlapa{
     width: 330px;
@@ -106,20 +100,13 @@
     outline: none;
     border: none;
     border-bottom:1px solid white ;
-
-    color: white;
-    background-color: #242831;
 }
 .shlapa>.Item-Title{
     font-size: 20px;
     font-weight: 600;
-
-    color: white;
 }
 .shlapa>.Item-Dec{
     font-size: 12px;
-
-    color: #585C65;
 }
 .LD-Buttons{
     height: 100%;
@@ -133,22 +120,14 @@
 }
 .EditoButton{
     margin-right: 30px;
-    
-    fill: white;
     transition: .2s ease-in-out;
     cursor: pointer;
 }
-.EditoButton:hover{
-    fill: rgb(194, 194, 194);
-}
 .DeletoButton{
-    fill: #BE4747;
+    
     transition: .2s ease-in-out;
     cursor: pointer;
     display: block;
-}
-.DeletoButton:hover{
-    fill: #8a3434;
 }
 
 
@@ -164,14 +143,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    
     
     cursor: pointer;
     transition: .3s ease-in-out;
-    background-color: #333946;
-}
-.LD-AddTowar:hover{
-    background-color: #22262e;
 }
 /*addtowar*/
 .addtowar{
@@ -180,7 +155,6 @@
     border-radius: 10px;
     display: block;
 
-    background-color: #242831;
 }
 .addtowar-hidden{
     display: none;
@@ -198,8 +172,6 @@
     border-bottom: 1px solid white;
 
     outline: none;
-    color: white;
-    background-color: #242831;
 }
 .SaveButton{
     height: 30px;
@@ -213,8 +185,6 @@
     float: right;
     
     border: none;
-    color: white;
-    background-color: rgb(42, 99, 42);
 }
 .SaveButtonEdit{
     border-radius: 10px;
@@ -227,8 +197,6 @@
     float: right;
     border: none;
 
-    background-color: rgb(42, 99, 42);
-    color: white;
 }
 
 /*Member*/
@@ -237,8 +205,6 @@
     padding: 10px;
     width: 310px;
     border-radius: 10px;
-
-    background-color: #242831;
 }
 .LD-MemberListSkeleton{
     padding: 10px;
@@ -265,30 +231,25 @@
     width: 310px;
     border-radius: 10px;
 
-    background-color: #242831;
 }
 .LD-MemeberHead{
     width: 100%;
     font-size: 24px;
     font-weight: 600;
 
-    color: white;
     float: left;
 }
 
 .LD-MemeberHead>div>svg{
-    fill: white;
-
     transition: .3s ease-in-out;
-}
-.LD-MemeberHead>div>svg:hover{
-    fill: rgb(189, 189, 189);
 }
 .LD-MemeberHead>.a{
     float: left;
 }
+.HideMobil{
+    display: none;
+}
 .EditMember{
-    fill: white;
     float: right;
 }
 .Members{
@@ -309,14 +270,11 @@
     font-size: 24px;
     margin-top: 5px;
     float: left;
-
-    color: white;
 }
 .Garazza>div:nth-child(2){
     margin-top: 10px;
     margin-left: 5px;
 
-    color: #585C65;
     float: left;
 }
 .DeleteUser{
@@ -326,10 +284,6 @@
     display: block;
     position: absolute;
     
-    fill: #BE4747;
-}
-.DeleteUser:hover{
-    fill: #923a3a;
 }
 .DeleteUserHide{
     display: none;
@@ -351,12 +305,8 @@
     
     cursor: pointer;
     transition: .3s ease-in-out;
-    background-color: #333946;
-    color: white;
 }
-.LD-MemberListVis>.PlusMember:hover{
-    background-color: #1f232b;
-}
+
 .MemberSearch>.Garazza{
     display: block;
 }
@@ -376,7 +326,6 @@
     font-weight: 600;
     
     text-align: center;
-    color: white;
 }
 .MemberSearchHide{
     display: none;
@@ -399,11 +348,6 @@
     transition: .3s ease-in-out;
     cursor: pointer;
 
-    color: white;
-    background-color: #333946;
-}
-.LeaveButton:hover{
-    background-color: #585C65;
 }
 .LeaveButtonHide{
     display: none;

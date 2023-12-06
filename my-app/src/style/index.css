@@ -5,6 +5,395 @@
     
     font-family: 'Inter', sans-serif;
 }
-body{
+.Dark{
     background-color: #2A2E37;
+}
+/**/
+.Dark .Main-color{
+    background-color: #242831;
+}
+.Dark .Main-Button{
+    background-color: #242831;
+}
+.Dark .Main-Button:hover{
+    background-color: #393e4b;
+}
+.Dark .Second-color{
+    background-color: #242831;
+}
+.Dark .Search-Color{
+    background-color: #2A2E37;
+}
+.Dark .Third-Color{
+    background-color: #4147FF;
+}
+.Dark .Third-Color:hover{
+    background-color: #3439c4;
+}
+.Dark .Active-color:active{
+    background-color: #3439c4;
+}
+.Dark .Hide-Color{
+    background-color: #3f4147;
+}
+/**/
+.Dark .Icon-Color{
+    fill:#585C65;
+}
+.Dark .Icon-Color:hover{
+    fill: #97a0b1;
+}
+/**/
+
+.Dark .Line-Color{
+    background-color: #585A66;
+}
+
+.Dark .ButtonLogin-Color{
+    background-color: #49505F;
+}
+.Dark .ButtonLogin-Color:hover{
+    background-color: #363b46;
+}
+/**/
+.Dark .Text-Color{
+    color: white;
+}
+.Dark .second-text-color{
+    color: #585C65;
+}
+.Dark .SVG-main-color{
+    fill: white;
+}
+.Dark .SVG-main-color:hover{
+    fill: rgb(160, 160, 160);
+}
+.Dark .DeleteButtonSVG{
+    fill:#BE4747; 
+}
+.Dark .DeleteButtonSVG:hover{
+    fill:#772f2f; 
+}
+.Dark .AddButton-color{
+    background-color: #333946;
+}
+.Dark .AddButton-color:hover{
+    background-color: #22262e;
+}
+
+
+
+
+
+.SkyBlue{
+    background-color: #94CFE1;
+}
+/**/
+.SkyBlue .Main-color{
+    background-color: #38778B;
+}
+.SkyBlue .Main-Button{
+    background-color: #38778B;
+}
+.SkyBlue .Main-Button:hover{
+    background-color: #2d6170;
+}
+.SkyBlue .Second-color{
+    background-color: #C2F4FF;
+}
+.SkyBlue .Search-Color{
+    background-color: #94CFE1;
+}
+.SkyBlue .Third-Color{
+    background-color: #5CCEE8;
+}
+.SkyBlue .Third-Color:hover{
+    background-color: #4faec4;
+}
+.SkyBlue .Active-color:active{
+    background-color: #4faec4;
+}
+.SkyBlue .Hide-Color{
+    background-color: #6FDEF6;
+}
+/**/
+.SkyBlue .Icon-Color{
+    fill:#585C65;
+}
+.SkyBlue .Icon-Color:hover{
+    fill: #97a0b1;
+}
+/**/
+
+.SkyBlue .Line-Color{
+    background-color: #1F3367;
+}
+
+.SkyBlue .ButtonLogin-Color{
+    background-color: #E0F3FA;
+}
+.SkyBlue .ButtonLogin-Color:hover{
+    background-color: #c3d6dd;
+}
+/**/
+.SkyBlue .Text-Color{
+    color: #1F3367;
+}
+.SkyBlue .second-text-color{
+    color: #585C65;
+}
+.SkyBlue .SVG-main-color{
+    fill: #333333;
+}
+.SkyBlue .SVG-main-color:hover{
+    fill: rgb(128, 128, 128)
+}
+.SkyBlue .DeleteButtonSVG{
+    fill:#FD6969; 
+}
+.SkyBlue .DeleteButtonSVG:hover{
+    fill:#e25e5e; 
+}
+.SkyBlue .AddButton-color{
+    background-color: #333946;
+}
+.SkyBlue .AddButton-color:hover{
+    background-color: #22262e;
+}
+
+
+
+.PurpleHei{
+    background-color: #E0D9FF;
+}
+/**/
+.PurpleHei .Main-color{
+    background-color: #917DCA;
+}
+.PurpleHei .Main-Button{
+    background-color: #917DCA;
+}
+.PurpleHei .Main-Button:hover{
+    background-color: #a294ce;
+}
+.PurpleHei .Second-color{
+    background-color: #C9B7FE;
+}
+.PurpleHei .Search-Color{
+    background-color: #E0D9FF;
+}
+.PurpleHei .Third-Color{
+    background-color: #917DCA;
+}
+.PurpleHei .Third-Color:hover{
+    background-color: #C9B7FE;
+}
+.PurpleHei .Active-color:active{
+    background-color: #917DCA;
+}
+.PurpleHei .Hide-Color{
+    background-color: #917DCA;
+}
+/**/
+.PurpleHei .Icon-Color{
+    fill:#270B62;
+}
+.PurpleHei .Icon-Color:hover{
+    fill: #5126ad;
+}
+/**/
+
+.PurpleHei .Line-Color{
+    background-color: #585A66;
+}
+
+.PurpleHei .ButtonLogin-Color{
+    background-color: #E0F3FA;
+}
+.PurpleHei .ButtonLogin-Color:hover{
+    background-color: #c3d6dd;
+}
+/**/
+.PurpleHei .Text-Color{
+    color: #333333;
+}
+.PurpleHei .second-text-color{
+    color: #585C65;
+}
+.PurpleHei .SVG-main-color{
+    fill: #270B62;
+}
+.PurpleHei .SVG-main-color:hover{
+    fill: #361088
+}
+.PurpleHei .DeleteButtonSVG{
+    fill:#E21313; 
+}
+.PurpleHei .DeleteButtonSVG:hover{
+    fill:rgb(230, 27, 27); 
+}
+.PurpleHei .AddButton-color{
+    background-color: #333946;
+}
+.PurpleHei .AddButton-color:hover{
+    background-color: #22262e;
+}
+
+
+
+
+
+
+.WhiteGolden{
+    background-color: #FFFFFF;
+}
+/**/
+.WhiteGolden .Main-color{
+    background-color: #EDD8B8;
+}
+.WhiteGolden .Main-Button{
+    background-color: #EDD8B8;
+}
+.WhiteGolden .Main-Button:hover{
+    background-color: #b3a28a;
+}
+.WhiteGolden .Second-color{
+    background-color: #f1ebdd;
+}
+.WhiteGolden .Search-Color{
+    background-color: #FFFFFF;
+}
+.WhiteGolden .Third-Color{
+    background-color: #EDD8B8;
+}
+.WhiteGolden .Third-Color:hover{
+    background-color: #bead93;
+}
+.WhiteGolden .Active-color:active{
+    background-color: #bead93;
+}
+.WhiteGolden .Hide-Color{
+    background-color: #E9CA9B;
+}
+/**/
+.WhiteGolden .Icon-Color{
+    fill:#4F3815;
+}
+.WhiteGolden .Icon-Color:hover{
+    fill: #6e4e1e;
+}
+/**/
+
+.WhiteGolden .Line-Color{
+    background-color: #7E5B25;
+}
+
+.WhiteGolden .ButtonLogin-Color{
+    background-color: #FFFAF1;
+}
+.WhiteGolden .ButtonLogin-Color:hover{
+    background-color: #d6d0c5;
+}
+/**/
+.WhiteGolden .Text-Color{
+    color: #4F3815;
+}
+.WhiteGolden .second-text-color{
+    color: #A06666;
+}
+.WhiteGolden .SVG-main-color{
+    fill: #333333;
+}
+.WhiteGolden .SVG-main-color:hover{
+    fill: #5c5c5c
+}
+.WhiteGolden .DeleteButtonSVG{
+    fill:#FD6969; 
+}
+.WhiteGolden .DeleteButtonSVG:hover{
+    fill:rgb(230, 27, 27); 
+}
+.WhiteGolden .AddButton-color{
+    background-color: #333946;
+}
+.WhiteGolden .AddButton-color:hover{
+    background-color: #22262e;
+}
+
+
+
+.BoringGrey{
+    background-color: #F5F5F5;
+}
+/**/
+.BoringGrey .Main-color{
+    background-color: #C5C5C5;
+}
+.BoringGrey .Main-Button{
+    background-color: #C5C5C5;
+}
+.BoringGrey .Main-Button:hover{
+    background-color: #a1a1a1;
+}
+.BoringGrey .Second-color{
+    background-color: #C5C5C5;
+}
+.BoringGrey .Search-Color{
+    background-color: #F5F5F5;
+}
+.BoringGrey .Third-Color{
+    background-color: #a0a0a0;
+}
+.BoringGrey .Third-Color:hover{
+    background-color: #6d6d6d;
+}
+.BoringGrey .Active-color:active{
+    background-color: #6d6d6d;
+}
+.BoringGrey .Hide-Color{
+    background-color: #8a8a8a;
+}
+/**/
+.BoringGrey .Icon-Color{
+    fill:#4F3815;
+}
+.BoringGrey .Icon-Color:hover{
+    fill: #6e4e1e;
+}
+/**/
+
+.BoringGrey .Line-Color{
+    background-color: #585A66;
+}
+
+.BoringGrey .ButtonLogin-Color{
+    background-color: #9AA2B4;
+}
+.BoringGrey .ButtonLogin-Color:hover{
+    background-color: #767c8a;
+}
+/**/
+.BoringGrey .Text-Color{
+    color: black;
+}
+.BoringGrey .second-text-color{
+    color: #585C65;
+}
+.BoringGrey .SVG-main-color{
+    fill: #333333;
+}
+.BoringGrey .SVG-main-color:hover{
+    fill: #5c5c5c
+}
+.BoringGrey .DeleteButtonSVG{
+    fill:#a13c3c; 
+}
+.BoringGrey .DeleteButtonSVG:hover{
+    fill:rgb(230, 27, 27); 
+}
+.BoringGrey .AddButton-color{
+    background-color: #333946;
+}
+.BoringGrey .AddButton-color:hover{
+    background-color: #22262e;
 }

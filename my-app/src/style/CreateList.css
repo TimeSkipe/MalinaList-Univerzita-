@@ -14,20 +14,13 @@
     justify-content: center;
     align-items: center;
     transition: .3s ease-in-out;
-    
-    fill: white;
-}
 
-.TitlePage>.ButtonBack{
-    fill: rgb(201, 201, 201);
 }
 .CreateFrom{
     width: 400px;
     margin: 0 auto;
 
     border-radius: 10px;
-    
-    background-color: #242831;
 }
 .CreateFrom>form{
     padding-top: 10px;
@@ -48,12 +41,10 @@
     border: none;
     border-bottom: solid white 1px;
     
-    color: white;
-    background-color: #242831;
 }
 .CreateFrom>form>button{
     height: 40px;
-    width: 200px;
+    padding: 0 20px;
     margin-bottom: 20px;
     margin-top: 20px;
     
@@ -65,11 +56,6 @@
     transition: .2s ease-in-out;
     cursor: pointer;
 
-    color: white;
-    background-color: #4147FF;
-}
-.CreateFrom>form>button:hover{
-    background-color: #3439c4;
 }
 .LabelIcon{
     height: 50px;
@@ -84,10 +70,6 @@
     align-items: center;
     justify-content: center;
     float: left;
-}
-
-.LabelIcon:active{
-    background-color: #3439c4;
 }
 .LabelIcon>input{
     visibility: hidden;

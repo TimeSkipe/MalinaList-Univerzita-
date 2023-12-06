@@ -1,0 +1,751 @@
+@media screen and (min-width: 1440px){
+    /*Header*/
+    
+    /*List*/
+    /*Lists*/
+    /*Login*/
+    /*Register*/
+    /*ListCreate*/
+    
+}
+@media screen and (min-width: 1024px) and (max-width:1440px){
+    /*Header*/
+    .headerBar{
+        height: 80px;
+    }
+    .Logo{
+        height: 55px;
+        width: 55px;
+        left: 10px;
+        top:12px;
+    }
+    .SearchBlock{
+        height: 80px;
+        width: 300px;
+    }
+    .SearchBar{
+        height: 40px;
+        width: 300px;
+    }
+    .line{
+        height: 50px;
+        width: 2px;
+        margin-right: 20px;
+        margin-top: 15px;
+    }
+    .UserBlock{
+        height: 80px;
+        width: 220px;
+        
+    }
+    .UserBarLogin{
+        height: 40px;
+        width: 90px;
+        margin: 0 5px;
+        font-size: 16px;
+    }
+    .UserBarAuthen{
+        height: 40px;
+        width: 300px;
+
+    }
+    .UserInfo>div:nth-child(1){
+        font-size: 14px;
+    }
+    
+    .UserInfo>div:nth-child(2){
+        font-size: 10px;
+    }
+    .ButtonToHideMenu{
+        height: 40px;
+        width: 40px;
+    }
+    .HideMenuBar{
+        width: 200px;
+        position: absolute;
+        right: 0;
+    }
+    .HideMenuBar>.ActualLan{
+        height: 40px;
+        width: 100%;
+    }
+    .HideMenuBar>.ActualLan>img{
+        height: 18px;
+        width: 26px;
+    }
+    .HideLanBar>div{
+        height: 30px;
+    }
+    .HideLanBar>div>img{
+        height: 18px;
+        width: 26px;
+        margin-right: 7px;
+    }
+    .exitButton{
+        height: 40px;
+        width: 100%;
+    }
+    /*List*/
+    .ListDetailBlock{
+        width: 1024px !important;
+    }
+    .ListDetailBlock>.ButtonBack{
+        left: 90px !important;
+    }
+    /*Lists*/
+    .ListsBlock{
+        display: block;
+    }
+    .ListTitleCreate{
+        width: 1000px;
+        height: 70px;
+    }
+    .ListTitleCreate>.Title{
+        font-size: 26px;
+        font-weight: 700;
+    }
+    .ListTitleCreate>.CreateListBlock{
+        height: 40px;
+        padding: 0 15px;
+    
+        font-size: 16px;
+    }
+    .ListTitleCreate>.CreateListBlock>svg{
+        margin-left: 5px;
+        height: 25px;
+    }
+    .ListOfLists{
+        width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .ListOfListsHide{
+        width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .ListOfLists>.ListoBar{
+        height: 70px;
+    }
+    .ListOfLists>.ListoBarSkelenot{
+        height: 70px;
+    }
+    .ListOfListsHide>.ListoBar{
+        height: 70px;
+    }
+    .IconBlock{
+        height: 100%;
+        width: 70px;
+    }
+    .InfoBlock{
+        width: 750px;
+    }
+    .titleList{
+        font-size: 16px;
+    }
+    .ButtonBlock{
+        width: 180px;
+    }
+    
+    .ArchiveButton>svg{
+        height: 25px;
+        width: 25px;
+    }
+    .EditButton>svg{
+        height: 25px;
+        width: 25px;
+    }
+    .DeleteButton>svg{
+        height: 25px;
+        width: 25px;
+    } 
+    .ArchiveButtonShow{
+        height: 50px;
+        width: 50px;
+        right: 20px;
+        bottom: 10px;
+    }
+    
+    .ArchiveButtonShow>svg{
+        fill: white;
+        height: 25px;
+        width: 25px;
+    }
+    /*Login*/
+    /*Register*/
+    /*ListCreate*/
+    .TitlePage{
+        width: 350px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-size: 26px;
+    }
+    .TitlePage>.ButtonBack{
+        height: 30px;
+        width: 30px;
+    }
+    .CreateFrom{
+        width: 350px;
+    }
+    .CreateFrom>form>input{
+        width: 320px;
+        height: 25px;
+        margin-bottom: 8px;
+        padding-left: 10px;
+    
+        font-size: 16px;
+    }
+    .CreateFrom>form>button{
+        height: 35px;
+        margin-top: 10px;
+        
+        font-size: 16px;
+    }
+    .LabelIcon{
+        height: 45px;
+        width: 45px;
+        margin: 0 3px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 768px){
+    /*Header*/
+    .headerBar{
+        height: 120px;
+    }
+    .Logo{
+        height: 35px;
+        width: 35px;
+        left: 10px;
+        top:12px;
+    }
+    .SearchBlock{
+        height: 60px;
+        display: block;
+        position: absolute;
+        width: calc(100vw - 20px);
+        left: 0px;
+        padding: 0 10px;
+        top:60px;
+    }
+    .SearchBar{
+        height: 40px;
+        width: 100%;
+    }
+    .line{
+        height: 50px;
+        width: 2px;
+        display: none;
+        margin-top: 15px;
+    }
+    .UserBlock{
+        height: 100vh;
+        width: 360px;
+        display: block;
+        transition: .2s ease-in-out;
+        transform: translateY(-100%);
+        border-left: 1px solid white;
+        z-index: 5;
+    }
+    .Burger{
+        position: absolute;
+        right: 15px;
+        z-index: 0;
+        top:15px;
+    }
+    .UserBarLogin{
+        height: 40px;
+        width: 90px;
+        margin: 0 5px;
+        font-size: 16px;
+    }
+    .UserBarAuthen{
+        height: 40px;
+        width: 100%;
+    }
+    .UserInfo{
+        height: 30px;
+        width: calc(100% - 30px);
+        padding: 15px;
+        display: block;
+        position: relative;
+    }
+    .Burger{
+        display: block;
+    }
+    .UserInfo>div:nth-child(1){
+        float: left;
+        display: block;
+    }
+    .UserInfo>div:nth-child(2){
+        font-size: 14px;
+        position: absolute;
+        right: 15px;
+        top:10px;
+    }
+    
+    .UserInfo>div:nth-child(3){
+        font-size: 10px;
+        position: absolute;
+        right: 15px;
+        top:35px;
+        font-weight: 400;
+    }
+    .ButtonToHideMenu{
+        height: 40px;
+        width: 40px;
+        display: none;
+        }
+        .HideMenu{
+            width: 100%;
+        }
+    .HideMenuBar{
+        width: 200px;
+        position: absolute;
+        right: 0;
+        width: 100%;
+    }
+    .HideMenuBar>.ActualLan{
+        height: 40px;
+        width: calc(100% - 20px);
+        justify-content: space-between;
+        padding: 0 10px;
+        margin-bottom: 10px;
+    }
+    .HideMenuBar>.ActualLan>img{
+        height: 18px;
+        width: 26px;
+    }
+    .HideLanBar>div{
+        height: 40px;
+        padding: 0 20px;
+    }
+    .HideLanBar>div>img{
+        height: 18px;
+        width: 26px;
+        margin-right: 7px;
+    }
+    .exitButton{
+        height: 40px;
+        width: 100%;
+    }
+    /*List*/
+    .ListDetailBlock{
+        display:block;
+        position: relative;
+    }
+    .ListDetailBlock>.ButtonBack{
+        left: 10px !important;
+    }
+    .ListDetailBlock{
+        width: 100vw !important;
+    }
+    .ListDetailTitle{
+        width: 100vw !important;
+        font-size: 3vw !important ;
+
+    }
+    .LD-ItemsList{
+        width: calc(100% - 20);
+        padding: 0 10px;
+    }
+    .ListDInfa{
+        display: block !important;
+        position:  relative !important;
+    }
+    .LD-MemberList{
+        display: block;
+        width: 80vw;
+        height: 100vh;
+        position: absolute !important;
+        border-radius: 0 !important;
+        top:-130px;
+        right: 0px;
+        transform: translateY(-100%);
+        transition: .2s ease-in-out;
+    }
+    .LD-MemberListVis{
+        display: block;
+        width: 80vw !important;
+        height: 100vh;
+        position: absolute !important;
+        border-radius: 0 !important;
+        top:-130px;
+        right: 0px;
+        transform: translateY(-00%) ;
+        transition: .2s ease-in-out;
+    }
+    .shlapa{
+        width: 200px !important;
+    }
+    .HideMobil{
+        display: block !important;
+        padding: 5px 20px ;
+        position: absolute;
+        top:20px;
+        border-radius: 5px;
+        right: 15px;
+    }
+    .shlapa>.Item-Title{
+        font-size: 14px !important;
+    }
+    .LD-MemeberHead{
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    .LD-MemeberHead{
+        float: none !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .LD-MemeberHead>.a{
+        float: none !important;
+    }
+    .Garazza{
+        
+        border-bottom: solid grey 1px;
+    }
+    /*Lists*/
+    .ListsBlock{
+        display: block;
+    }
+    .ListTitleCreate{
+        width: 95vw;
+        height: 70px;
+    }
+    .ListTitleCreate>.Title{
+        font-size: 4vw;
+        font-weight: 700;
+    }
+    .ListTitleCreate>.CreateListBlock{
+        height: 40px;
+        padding: 0 15px;
+    
+        font-size: 2.5vw;
+        margin-right: 50px;
+    }
+    .ListTitleCreate>.CreateListBlock>svg{
+        margin-left: 5px;
+        height: 25px;
+    }
+    .ListOfLists{
+        width: 95vw;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .ListOfListsHide{
+        width: 95vw;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .ListOfLists>.ListoBar{
+        height: 70px;
+    }
+    .ListOfLists>.ListoBarSkelenot{
+        height: 70px;
+    }
+    .ListOfListsHide>.ListoBar{
+        height: 70px;
+    }
+    .IconBlock{
+        height: 100%;
+        width: 65px;
+    }
+    .IconBlock>svg{
+        width: 70%;
+    }
+    .InfoBlock{
+        width: 45vw;
+    }
+    .titleList{
+        font-size: 3vw;
+    }
+    .roleList{
+        font-size: 2.5vw;
+    }
+    .ButtonBlock{
+        width: 120px;
+        float: right;
+    }
+    
+    .ArchiveButton>svg{
+        height: 25px;
+        width: 25px;
+    }
+    .EditButton>svg{
+        height: 25px;
+        width: 25px;
+    }
+    .DeleteButton>svg{
+        height: 25px;
+        width: 25px;
+    } 
+    .ArchiveButtonShow{
+        height: 40px;
+        width: 40px;
+        right: 20px;
+        top:15px;
+        border-radius: 5px;
+    }
+    
+    .ArchiveButtonShow>svg{
+        height: 20px;
+        width: 20px;
+    }
+    /*Login*/
+    /*Register*/
+    /*ListCreate*/
+    .TitlePage{
+        width: 360px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-size: 20px;
+        
+    }
+    .TitlePage>.ButtonBack{
+        height: 30px;
+        width: 30px;
+    }
+    .CreateFrom{
+        width: 360px;
+        
+    }
+    .CreateFrom>form>input{
+        width: 320px;
+        height: 25px;
+        margin-bottom: 8px;
+        padding-left: 10px;
+    
+        font-size: 16px;
+    }
+    .CreateFrom>form>button{
+        height: 35px;
+        padding: 0 20px;
+        margin-top: 10px;
+        
+        font-size: 16px;
+    }
+    .LabelIcon{
+        height: 45px;
+        width: 45px;
+        margin: 0 3px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width:1024px){
+    /*Header*/
+    .headerBar{
+        height: 80px;
+    }
+    .Logo{
+        height: 55px;
+        width: 55px;
+        left: 10px;
+        top:12px;
+    }
+    .SearchBlock{
+        height: 80px;
+        width: 300px;
+    }
+    .SearchBar{
+        height: 40px;
+        width: 300px;
+    }
+    .line{
+        height: 50px;
+        width: 2px;
+        margin-right: 20px;
+        margin-top: 15px;
+    }
+    .UserBlock{
+        height: 80px;
+        width: 220px;
+        
+    }
+    .UserBarLogin{
+        height: 40px;
+        width: 90px;
+        margin: 0 5px;
+        font-size: 16px;
+    }
+    .UserBarAuthen{
+        height: 40px;
+        width: 300px;
+
+    }
+    .UserInfo>div:nth-child(1){
+        font-size: 14px;
+    }
+    
+    .UserInfo>div:nth-child(2){
+        font-size: 10px;
+    }
+    .ButtonToHideMenu{
+        height: 40px;
+        width: 40px;
+    }
+    .HideMenuBar{
+        width: 200px;
+        position: absolute;
+        right: 0;
+    }
+    .HideMenuBar>.ActualLan{
+        height: 40px;
+        width: 100%;
+    }
+    .HideMenuBar>.ActualLan>img{
+        height: 18px;
+        width: 26px;
+    }
+    .HideLanBar>div{
+        height: 30px;
+    }
+    .HideLanBar>div>img{
+        height: 18px;
+        width: 26px;
+        margin-right: 7px;
+    }
+    .exitButton{
+        height: 40px;
+        width: 100%;
+    }
+    /*List*/
+    .ListDetailBlock{
+        display:block;
+    }
+    .ListDetailBlock>.ButtonBack{
+        left: 0px !important;
+    }
+    .ListDetailBlock{
+        width: 90vw !important;
+    }
+    .ListDetailTitle{
+        width: 90vw !important;
+        font-size: 24px !important ;
+
+    }
+    .LD-MemberList{
+        
+        display: block;
+    }
+    .shlapa{
+        width: 200px !important;
+    }
+    .shlapa>.Item-Title{
+        font-size: 14px !important;
+    }
+    /*Lists*/
+    .ListsBlock{
+        display: block;
+    }
+    .ListTitleCreate{
+        width: 95vw;
+        height: 70px;
+    }
+    .ListTitleCreate>.Title{
+        font-size: 26px;
+        font-weight: 700;
+    }
+    .ListTitleCreate>.CreateListBlock{
+        height: 40px;
+        padding: 0 15px;
+    
+        font-size: 16px;
+    }
+    .ListTitleCreate>.CreateListBlock>svg{
+        margin-left: 5px;
+        height: 25px;
+    }
+    .ListOfLists{
+        width: 95vw;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .ListOfListsHide{
+        width: 95vw;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .ListOfLists>.ListoBar{
+        height: 70px;
+    }
+    .ListOfLists>.ListoBarSkelenot{
+        height: 70px;
+    }
+    .ListOfListsHide>.ListoBar{
+        height: 70px;
+    }
+    .IconBlock{
+        height: 100%;
+        width: 70px;
+    }
+    .InfoBlock{
+        width: 67vw;
+    }
+    .titleList{
+        font-size: 16px;
+    }
+    .ButtonBlock{
+        width: 18vw;
+    }
+    
+    .ArchiveButton>svg{
+        height: 25px;
+        width: 25px;
+    }
+    .EditButton>svg{
+        height: 25px;
+        width: 25px;
+    }
+    .DeleteButton>svg{
+        height: 25px;
+        width: 25px;
+    } 
+    .ArchiveButtonShow{
+        height: 50px;
+        width: 50px;
+        right: 20px;
+        bottom: 10px;
+    }
+    
+    .ArchiveButtonShow>svg{
+        fill: white;
+        height: 25px;
+        width: 25px;
+    }
+    /*Login*/
+    /*Register*/
+    /*ListCreate*/
+    .TitlePage{
+        width: 350px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-size: 26px;
+    }
+    .TitlePage>.ButtonBack{
+        height: 30px;
+        width: 30px;
+    }
+    .CreateFrom{
+        width: 350px;
+    }
+    .CreateFrom>form>input{
+        width: 320px;
+        height: 25px;
+        margin-bottom: 8px;
+        padding-left: 10px;
+    
+        font-size: 16px;
+    }
+    .CreateFrom>form>button{
+        height: 35px;
+        padding: 0 20px;
+        margin-top: 10px;
+        
+        font-size: 16px;
+    }
+    .LabelIcon{
+        height: 45px;
+        width: 45px;
+        margin: 0 3px;
+    }
+}
